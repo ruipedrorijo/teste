@@ -1,0 +1,2 @@
+https://www.ruby-lang.org/en/documentation/quickstart/
+http://www.techotopia.com/index.php/Ruby_Essentials
