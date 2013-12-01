@@ -52,6 +52,10 @@ if __FILE__ == $0
 	ms.names = nil
 	ms.diz_ola
 	ms.diz_adeus
+	
+	puts "#{__FILE__}"
+	puts "#{$0}"
+	
 end
 
 	
