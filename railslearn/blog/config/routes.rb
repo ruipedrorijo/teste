@@ -1,14 +1,31 @@
 Blog::Application.routes.draw do
-  get "welcome/index"
-  # The priority is based upon order of creation: first created -> highest priority.
-  # See how all your routes lay out with "rake routes".
 
-  resources	:posts
-  
+  # get "welcome/index" tells Rails to map requests 
+  # to http://localhost:3000/welcome/index to the 
+  # welcome controller's index action. This was created 
+  # earlier when you ran the controller generator 
+  # (rails generate controller welcome index).
+  #
+  get "welcome/index"
+
   # You can have the root of your site routed with "root"
+  # The root "welcome#index" tells Rails to map requests to 
+  # the root of the application to the welcome controller's index action
   root 'welcome#index'
   
+  # A resource is the term used for a collection of similar objects, 
+  # such as posts, people or animals. You can create, read, update and 
+  # destroy items for a resource and these operations are referred to as 
+  # CRUD operations. 
+  # Rails provides a resources method which can be used to declare a 
+  # standard REST resource.
+  
+  resources	:posts
+  
 
+  
+  # The priority is based upon order of creation: first created -> highest priority.
+  # See how all your routes lay out with "rake routes".
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
