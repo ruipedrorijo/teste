@@ -1,0 +1,32 @@
+C:\Users\Rui Rijo\teste\railslearn\blog>sqlite3 db\development.sqlite3
+SQLite version 3.8.1 2013-10-17 12:57:35
+Enter ".help" for instructions
+Enter SQL statements terminated with a ";"
+sqlite>
+sqlite> selec * from post;
+Error: near "selec": syntax error
+sqlite> select * from post;
+Error: no such table: post
+sqlite> .database
+seq  name             file
+
+---  ---------------  ----------------------------------------------------------
+
+0    main             C:\Users\Rui Rijo\teste\railslearn\blog\db\development.sql
+
+sqlite> .table
+posts              schema_migrations
+sqlite> select * from posts;
+1|xxxxx|xxxxxxxxx|2013-12-05 01:52:26.682639|2013-12-05 01:52:26.682639
+2|xx|xx|2013-12-05 01:56:27.573417|2013-12-05 01:56:27.573417
+3|ttttttttt|textT|2013-12-05 10:24:09.616424|2013-12-05 10:24:09.616424
+4|wqer|qeeqw|2013-12-07 15:01:13.698333|2013-12-07 15:01:13.698333
+sqlite> .schema
+CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL);
+CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version"
+);
+CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" v
+archar(255), "text" text, "created_at" datetime, "updated_at" datetime);
+sqlite> .quit
+
+C:\Users\Rui Rijo\teste\railslearn\blog>
